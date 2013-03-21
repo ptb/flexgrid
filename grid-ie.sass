@@ -1,0 +1,43 @@
+/**! ptb2.me/grid | (c) 2013 Peter T Bosse II | Apache license
+/**! Inspired by Bootstrap 3.0 | License: http://bit.ly/WzvaP8
+
+$fixed-grid-width: 960px !default
+$grid-gutter-width: 20px !default
+$grid-columns: 12 !default
+
+// Rename these classes if you don't need Bootstrap compatibility
+$container: 'container' !default
+$row: 'row' !default
+$span: 'span' !default
+$offset: 'offset' !default
+
+=fixed-grid-widths($num-columns)
+  $i: 1
+  @while $i <= $num-columns
+    .#{$span}#{$i}
+      *width: ((($fixed-grid-width / $num-columns) * $i) - $grid-gutter-width)
+    @if $i < $num-columns
+      .#{$offset}#{$i}
+        *margin-left: (($fixed-grid-width / $num-columns) * $i)
+    $i: $i + 1
+
+=span-x($num-columns)
+  $i: 1
+  @while $i <= $num-columns
+    .#{$span}#{$i}
+      @extend %span
+    $i: $i + 1
+
+.#{$container}
+  *width: $fixed-grid-width
+
+.#{$row}
+  *zoom: 1
+
+%span
+  *display: inline
+  *float: left
+
++span-x($grid-columns)
+
++fixed-grid-widths($grid-columns)
