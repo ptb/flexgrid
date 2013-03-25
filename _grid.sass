@@ -104,7 +104,7 @@ $pull: 'pull' !default
   @media (min-width: 768px)
 
     .no-flexbox.no-webkitbox
-      [class*='#{$span}']
+      & *[class*='#{$span}']
         position: relative
         float: left
         &.pull-right
@@ -114,14 +114,14 @@ $pull: 'pull' !default
         +order-float($grid-columns)
 
     .flexbox, .webkitbox
-      .#{$row}
+      & .#{$row}
         display: -webkit-box
         //display: -moz-box
         display: -webkit-flex
         display: -ms-flexbox
         display: flex
 
-      //[class*='#{$span}']
+      //& *[class*='#{$span}']
         -webkit-box-flex: 1
         //-moz-box-flex: 1
         -webkit-flex-grow: 1
@@ -140,7 +140,7 @@ $pull: 'pull' !default
       margin-right: $grid-gutter-width / -2
       margin-left: $grid-gutter-width / -2
 
-    [class*='#{$span}']
+    *[class*='#{$span}']
       -webkit-box-sizing: border-box
       -moz-box-sizing: border-box
       box-sizing: border-box
@@ -159,6 +159,6 @@ $pull: 'pull' !default
       margin-right: $grid-gutter-width / -2
       margin-left: $grid-gutter-width / -2
 
-    [class*='#{$span}']
+    *[class*='#{$span}']
       padding-right: $grid-gutter-width / 2
       padding-left: $grid-gutter-width / 2
