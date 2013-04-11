@@ -20,7 +20,7 @@
 // FYI: Google has dropped support for IE 8: <bit.ly/z6LWk0>
 // FYI: jQuery 2.0 will drop support for IE 8: <bit.ly/QQ0Cme>
 
-$grid-gutter-width: 20px !default
+$grid-gutter-width: 30px !default
 $grid-columns: 12 !default
 $reorder: false !default
 
@@ -150,15 +150,5 @@ $pull: 'pull' !default
       max-width: 940px
 
   @media (min-width: 1200px)
-    $grid-gutter-width: 30px
-
     .#{$container}
       max-width: 1200px - $grid-gutter-width
-
-    .#{$row}
-      margin-right: $grid-gutter-width / -2
-      margin-left: $grid-gutter-width / -2
-
-    *[class*='#{$span}']
-      padding-right: $grid-gutter-width / 2
-      padding-left: $grid-gutter-width / 2
