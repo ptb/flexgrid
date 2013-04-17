@@ -66,8 +66,8 @@ $pull: 'pull' !default
 
 =order-flex($i)
   -webkit-box-ordinal-group: $i
-  -webkit-order: $i
   -ms-flex-order: $i
+  -webkit-order: $i
   order: $i
 
 =order-flex-x($num-columns)
@@ -121,8 +121,8 @@ $pull: 'pull' !default
     .flexbox, .webkitbox
       & .#{$row}
         display: -webkit-box
-        display: -webkit-flex
         display: -ms-flexbox
+        display: -webkit-flex
         display: flex
 
       @if $reorder
