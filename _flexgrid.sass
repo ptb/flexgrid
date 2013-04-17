@@ -66,7 +66,6 @@ $pull: 'pull' !default
 
 =order-flex($i)
   -webkit-box-ordinal-group: $i
-  //-moz-box-ordinal-group: $i
   -webkit-order: $i
   -ms-flex-order: $i
   order: $i
@@ -122,14 +121,12 @@ $pull: 'pull' !default
     .flexbox, .webkitbox
       & .#{$row}
         display: -webkit-box
-        //display: -moz-box
         display: -webkit-flex
         display: -ms-flexbox
         display: flex
 
       //& *[class*='#{$span}']
         -webkit-box-flex: 1
-        //-moz-box-flex: 1
         -webkit-flex-grow: 1
         -ms-flex: 1 1 auto
         flex-grow: 1
