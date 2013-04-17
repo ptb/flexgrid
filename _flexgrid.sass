@@ -125,12 +125,6 @@ $pull: 'pull' !default
         display: -ms-flexbox
         display: flex
 
-      //& *[class*='#{$span}']
-        -webkit-box-flex: 1
-        -webkit-flex-grow: 1
-        -ms-flex: 1 1 auto
-        flex-grow: 1
-
       @if $reorder
         +order-flex-x($grid-columns)
 
