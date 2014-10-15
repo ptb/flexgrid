@@ -17,5 +17,5 @@ A [customized] version of [Modernizr] is used to detect support for flexbox. The
 [Documentation], a [demo], and [source code] are available. Suggestions for improvement are welcome!
 
 [Documentation]: http://ptb2.me/flexgrid/
-[demo]: http://demo.ptb2.me/flexgrid/
+[demo]: http://ptb.github.io/flexgrid/
 [source code]: https://github.com/ptb/flexgrid
