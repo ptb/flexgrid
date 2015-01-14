@@ -69,6 +69,10 @@ $screen-lg-min: 1200px !default
   @if $type == width and $index > 0
     .col-#{$class}-#{$index}
       width: percentage($index / $grid-columns)
+      -webkit-flex-basis: percentage($index / $grid-columns)
+      -moz-flex-basis: percentage($index / $grid-columns)
+      -ms-flex-basis: percentage($index / $grid-columns)
+      flex-basis: percentage($index / $grid-columns)
   @if $reorder
     @if $type == push and $index > 0
       \:root:not(.flexbox):not(.webkitbox)
